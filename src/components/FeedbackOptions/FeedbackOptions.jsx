@@ -1,23 +1,16 @@
-import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class FeedbackOptions extends Component {
+export function FeedbackOptions(props) {
 
-  static propTypes = {
-    options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    onLeaveFeedback: PropTypes.func.isRequired,
-  };
-
-  render() {
     return (
       <div>
-        {this.props.options.map(option => {
+        {props.options.map(option => {
           return (
             <button
               type="button"
               // data-btn={option}
               key={option}
-              onClick={() => this.props.onLeaveFeedback(option)}
+              onClick={() => props.onLeaveFeedback(option)}
             >
               {option}
             </button>
@@ -26,5 +19,8 @@ export class FeedbackOptions extends Component {
       </div>
     );
   }
-}
 
+  FeedbackOptions.propTypes = {
+    options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired,
+  };

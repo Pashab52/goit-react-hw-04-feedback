@@ -9,11 +9,6 @@ export function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-
-
-  
-
-
  const options = ['good', 'neutral', 'bad'];
 
   const addFeedback = option => {
@@ -29,6 +24,7 @@ export function App() {
       case 'bad':
         setBad(prevBad => prevBad + 1);
         break;
+      default: console.log('error');
     }
   };
 

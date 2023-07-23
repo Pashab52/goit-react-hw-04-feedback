@@ -1,21 +1,18 @@
-import { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-export class Section extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
-  };
-
-  render() {
+export function Section (props) {
+  
     return (
       <div>
-        <p>{this.props.title}</p>
-        {this.props.children}
+        <p>{props.title}</p>
+        {props.children}
       </div>
     );
-  }
 };
 
 
+Section.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+  };
