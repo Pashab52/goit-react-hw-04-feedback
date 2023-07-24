@@ -1,0 +1,20 @@
+
+.btn{
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 5px;
+    width: 60px;
+}
+
+.btnWrap{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn:hover{
+
+
+scale: 1.05;
+}

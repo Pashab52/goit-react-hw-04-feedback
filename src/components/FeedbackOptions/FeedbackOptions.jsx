@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import css from './FeedbackOptions.module.css'
 
 export function FeedbackOptions(props) {
 
     return (
-      <div>
+      <div className={css.btnWrap}>
         {props.options.map(option => {
           return (
-            <button
+            <button className={css.btn}
               type="button"
               // data-btn={option}
               key={option}

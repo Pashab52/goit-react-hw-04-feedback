@@ -3,6 +3,7 @@ import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
 import { Notification } from './Notification/Notification';
+import css from './App.module.css'
 
 export function App() {
   const [good, setGood] = useState(0);
@@ -41,21 +42,10 @@ export function App() {
 
     return (
       <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 22,
-          color: '#010101',
-        }}
+        className={css.feedbackContainer}
       >
         <Section title="Please leave feedback">
-          <FeedbackOptions
-            options={options}
-            onLeaveFeedback={addFeedback}
-          />
+          <FeedbackOptions options={options} onLeaveFeedback={addFeedback} />
         </Section>
 
         <Section title="Statistics">
