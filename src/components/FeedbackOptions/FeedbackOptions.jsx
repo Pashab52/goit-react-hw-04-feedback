@@ -7,7 +7,8 @@ export function FeedbackOptions(props) {
       <div className={css.btnWrap}>
         {props.options.map(option => {
           return (
-            <button className={css.btn}
+            <button
+              className={css.btn}
               type="button"
               // data-btn={option}
               key={option}

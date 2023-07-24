@@ -3,7 +3,10 @@
     border: 2px solid white;
     border-radius: 3px;
     padding: 5px;
-    width: 60px;
+    width: 80px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
 }
 
 .btnWrap{
@@ -14,7 +17,5 @@
 }
 
 .btn:hover{
-
-
-scale: 1.05;
+scale: 1.04;
 }

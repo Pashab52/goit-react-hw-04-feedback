@@ -5,7 +5,7 @@ export function Section (props) {
   
     return (
       <div>
-        <p className={css.title}>{props.title}</p>
+        <h2 className={css.title}>{props.title}</h2>
         {props.children}
       </div>
     );
